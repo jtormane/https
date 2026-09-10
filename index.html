@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>2000-luvun Nettisivu</title>
+    <style>
+        /* SIVUN YLEISET ASETUKSET */
+        body {
+            background-color: #daad0d; /* Vaaleanharmaa tausta, klassikko! */
+            font-family: Verdana, Arial, sans-serif; /* 2000-luvun suosituimmat fontit */
+            color: #333333;
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        /* PÄÄSÄILIÖ (Wrapper) 
+           Tämä pitää kaiken sisällään, on 3/5 leveä ja keskitetty ruudulle */
+#container {
+            width: 50%;
+            margin: 0 auto; 
+            background-color: #ffffff;
+            border: 3px solid #181818; 
+            
+            /* UUDET ASETUKSET KORKEUDEN VENYTTÄMISEEN */
+            display: flex;
+            flex-direction: column;
+            /* 100vh tarkoittaa 100% ruudun korkeudesta. 
+               Vähennetään 44px, koska bodylla on 40px paddingia ja containerilla 4px reunoja (border) */
+            min-height: calc(100vh - 44px); 
+        }
+
+        /* YLÄVALIKKO */
+        #navbar {
+            background-color: #181818;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+
+        #navbar a:hover {
+            text-decoration: underline;
+            color: #ffcc00; /* Keltainen hover-efekti kun hiiri viedään päälle */
+        }
+
+        /* BANNERIOSIO */
+        #banner {
+            background-color: #ffc806;
+            height: 150px; /* Säädä tätä bannerikuvasi korkeuden mukaan */
+            border-bottom: 2px solid #181818;
+            
+            /* Keskittää "Tähän banneri" -tekstin, voit poistaa nämä kun lisäät kuvan */
+            display: flex;
+            align-items: center;
+            justify-content: left; 
+            font-size: 20px;
+            color: #666666;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /* Voit laittaa bannerikuvan tällä säännöllä täyttämään koko tilan */
+        #banner img {
+            height: 80%;
+            margin-left: 20px;
+            margin-right: 50px;
+            /*object-fit: cover;*/
+        }
+
+        /* TEKSTIOSIO */
+        #content {
+            padding: 30px;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            color: #181818;
+            border-bottom: 1px dotted #000080; /* Vanhan kunnon tyylinen alleviivaus otsikoille */
+            padding-bottom: 5px;
+            font-style: bold;
+        }
+
+        otsikko {
+            color: #181818;
+            padding-bottom: 5px;
+            font-style: bold;
+            font-size: 72px;
+        }
+
+        
+
+        /* ALATUNNISTE */
+        #footer {
+            text-align: center;
+            align-self: bottom;
+            font-size: 11px;
+            padding: 10px;
+            border-top: 1px dashed #999999;
+            background-color: #f8f8f8;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+ 
+    <div id="banner">
+        <img src="uuslogoilmantaustaa.png" alt="lusikkaaaaaaaa"> 
+        <otsikko>HTTPS ry</otsikko>
+    </div>
+
+    <!-- 1. Valikkonapit yläpuolella -->
+    <div id="navbar">
+        <a href="#">Etusivu</a>
+        <a href="#">Tietoa minusta</a>
+        <a href="#">Kuvagalleria</a>
+        <a href="#">Vieraskirja</a>
+        <a href="#">Linkkejä</a>
+    </div>
+
+
+
+    <!-- 3. Tekstiosio keskellä -->
+    <div id="content">
+        <h1>HTTPS ry</h1>
+        <p>Tervetuloa HTTPS ry:n nettisivuille!</p>
+        
+        <h2>Uutiset</h2>
+        <ul>
+            <li><strong>29.9.:</strong> Tour de Tuira @ Tuira</li>
+            <li><strong>1.10.</strong> Munkkitempaus PK1 suorittajille</li>
+        </ul>
+
+        <p><S>Lorem ipsum dolor sit amet</S></p>
+    </div>
+
+    <!-- Alatunniste -->
+    <div id="footer">
+        &copy; 2026 HTTPS ry
+    </div>
+
+</div>
+
+</body>
+</html>
