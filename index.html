@@ -5,145 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teekkarikulttuuriseura HTTPS ry</title>
     <style>
-
-        * {
-            box-sizing: border-box; /* Auttaa leveyksien laskemisessa reunoineen ja paddingeineen */
-        }
-
         /* SIVUN YLEISET ASETUKSET */
         body {
-            background-color: #daad0d; /* Vaaleanharmaa tausta, klassikko! */
-            font-family: Verdana, Arial, sans-serif; /* 2000-luvun suosituimmat fontit */
-            color: #333333;
+            background-color: #daad0d; 
+            font-family: Verdana, Arial, sans-serif; 
+            color: #000;
             margin: 0;
-            padding: 20px 0;
+            padding: 10px; /* Pieni keltainen reunus puhelimen reunoille */
         }
 
-        /* PÄÄSÄILIÖ (Wrapper) 
-           Tämä pitää kaiken sisällään, on 3/5 leveä ja keskitetty ruudulle */
-#container {
-            width: 50%;
-            margin: 0 auto; 
-            background-color: #ffffff;
-            border: 3px solid #181818; 
-            
-            /* UUDET ASETUKSET KORKEUDEN VENYTTÄMISEEN */
-            display: flex;
-            flex-direction: column;
-            /* 100vh tarkoittaa 100% ruudun korkeudesta. 
-               Vähennetään 44px, koska bodylla on 40px paddingia ja containerilla 4px reunoja (border) */
-            min-height: calc(100vh - 44px); 
-        }
-
-        /* YLÄVALIKKO */
-        #navbar {
-            background-color: #181818;
-            padding: 10px;
-            text-align: center;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        #navbar a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 5px 15px;
-            font-size: 14px;
-        }
-
-        #navbar a:hover {
-            text-decoration: underline;
-            color: #ffcc00; /* Keltainen hover-efekti kun hiiri viedään päälle */
+        /* PÄÄSÄILIÖ */
+        #container {
+            max-width: 800px; /* Tietokoneella sivu pysähtyy tähän leveyteen */
+            margin: 0 auto;   /* Keskiöi laatikon ruudulle tietokoneella */
+            background-color: #fff;
+            border: 2px solid #000;
         }
 
         /* BANNERIOSIO */
         #banner {
             background-color: #ffc806;
-            height: 150px; /* Säädä tätä bannerikuvasi korkeuden mukaan */
-            border-bottom: 2px solid #181818;
-            
-            /* Keskittää "Tähän banneri" -tekstin, voit poistaa nämä kun lisäät kuvan */
-            display: flex;
-            align-items: center;
-            justify-content: center; 
-            flex-wrap: wrap;
-            font-size: 20px;
-            color: #666666;
-            font-weight: bold;
-            font-style: italic;
+            border-bottom: 2px solid #000;
+            text-align: center; /* Keskittää logon ja otsikon nätisti puhelimella */
+            padding: 20px 10px;
         }
 
-        /* Voit laittaa bannerikuvan tällä säännöllä täyttämään koko tilan */
-    #banner img {
-        height: 100px;      /* Kiinteä maksimikorkeus mobiilissa */
-        width: auto;        /* Leveys mukautuu korkeuden mukaan */
-        object-fit: contain; /* TAKAA, että kuvasuhde ei ikinä vääristy */
-        flex-shrink: 0;      /* Estää flexboxia puristamasta kuvaa lyttyyn */
-        margin: 10px 15px;
+        #banner img {
+            max-height: 80px; /* Pidetään logo riittävän pienenä puhelimella */
+            width: auto;
+            vertical-align: middle;
+            margin: 10px;
+        }
+
+        otsikko {
+            font-weight: bold;
+            font-size: 36px; /* Puhelimeen mahtuva otsikkokoko */
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        /* YLÄVALIKKO */
+        #navbar {
+            background-color: #000;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px 15px;
+            display: inline-block; /* Antaa linkkien rivittyä sujuvasti usealle riville */
+            font-size: 16px;
+        }
+
+        #navbar a:hover {
+            color: #ffc806;
+            text-decoration: underline;
         }
 
         /* TEKSTIOSIO */
         #content {
-            padding: 30px;
-            line-height: 1.6;
+            padding: 20px; /* Sopiva sisämarginaali puhelimelle */
+            line-height: 1.5;
         }
 
         h1, h2 {
-            color: #181818;
-            border-bottom: 1px dotted #000080; /* Vanhan kunnon tyylinen alleviivaus otsikoille */
+            border-bottom: 2px solid #ffc806;
             padding-bottom: 5px;
-            font-style: bold;
+            margin-top: 0;
         }
-
-        otsikko {
-            color: #181818;
-            padding-bottom: 5px;
-            font-style: bold;
-            font-size: 72px;
-        }
-
-        
 
         /* ALATUNNISTE */
         #footer {
             text-align: center;
-            align-self: bottom;
-            font-size: 11px;
-            padding: 10px;
-            border-top: 1px dashed #999999;
-            background-color: #f8f8f8;
-            margin-top: auto;
+            font-size: 12px;
+            padding: 15px;
+            border-top: 2px solid #000;
+            background-color: #eee;
         }
 
-    @media (min-width: 768px) {
-    #container {
-        width: 50%;
-    }
-    #banner {
-        justify-content: flex-start;
-        padding: 0;
-    }
-    #banner img {
-        height: 80%;
-        width: auto;
-        object-fit: contain;
-        flex-shrink: 0;
-        margin-left: 20px;
-        margin-right: 50px;
-        margin-bottom: 0;
+        /* ==================================================
+           TIETOKONERUUDUT (Yli 600px leveät näytöt) 
+           Kaikki tämän alla oleva koskee vain isompia ruutuja 
+           ================================================== */
+        @media (min-width: 600px) {
+            body {
+                padding: 30px; /* Paksummat keltaiset reunat sivuilla */
+            }
+            #banner {
+                text-align: left; /* Tietokoneella tasataan vasemmalle */
+                padding: 20px 40px;
+            }
+            #banner img {
+                max-height: 120px; /* Isompi logo tietokoneelle */
+            }
+            otsikko {
+                font-size: 64px; /* Alkuperäinen jättiotsikko takaisin! */
+            }
+            #content {
+                padding: 40px; /* Väljempää tilaa tekstille */
+            }
         }
-    
-    #otsikko {
-        font-size: 72px;
-    }
-    #content {
-        padding: 30px;
-    }
-    }
-
-
     </style>
 </head>
 <body>
@@ -151,11 +115,11 @@
 <div id="container">
  
     <div id="banner">
-        <img src="uuslogoilmantaustaa.png" alt="lusikkaaaaaaaa"> 
+        <img src="uuslogoilmantaustaa.png" alt="HTTPS ry logo"> 
         <otsikko>HTTPS ry</otsikko>
     </div>
 
-    <!-- 1. Valikkonapit yläpuolella -->
+    <!-- Valikkonapit -->
     <div id="navbar">
         <a href="#">Etusivu</a>
         <a href="#">Historia</a>
@@ -163,9 +127,7 @@
         <a href="#">Linkkejä</a>
     </div>
 
-
-
-    <!-- 3. Tekstiosio keskellä -->
+    <!-- Tekstiosio -->
     <div id="content">
         <h1>HTTPS ry</h1>
         <p>Tervetuloa HTTPS ry:n nettisivuille!</p>
