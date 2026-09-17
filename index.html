@@ -126,13 +126,13 @@
         padding: 0;
     }
     #banner img {
-        height: 80%;
-        max-height: none;
-        margin-left: 20px;
-        margin-right: 50px;
-        margin-bottom: 0;
+        height: auto; /* TÄMÄ ON TÄRKEÄ: Säilyttää kuvasuhteen leveyden mukaan */
+        width: auto;  /* TÄMÄ ON TÄRKEÄ: Säilyttää kuvasuhteen korkeuden mukaan */
+        max-height: 120px; /* Rajoittaa korkeuden mobiilissa */
+        max-width: 100%; /* Estää leveyden pursuamisen ruudun yli */
+        margin: 0 15px 10px 15px;
     }
-    otsikko {
+    #otsikko {
         font-size: 72px;
     }
     #content {
