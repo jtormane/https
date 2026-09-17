@@ -76,12 +76,12 @@
         }
 
         /* Voit laittaa bannerikuvan tällä säännöllä täyttämään koko tilan */
-        #banner img {
-            height: 80%;
-            max-height: 100px;
-            max-width: 100px;
-            margin: 0 15px 10px 15px;
-            /*object-fit: cover;*/
+    #banner img {
+        height: 100px;      /* Kiinteä maksimikorkeus mobiilissa */
+        width: auto;        /* Leveys mukautuu korkeuden mukaan */
+        object-fit: contain; /* TAKAA, että kuvasuhde ei ikinä vääristy */
+        flex-shrink: 0;      /* Estää flexboxia puristamasta kuvaa lyttyyn */
+        margin: 10px 15px;
         }
 
         /* TEKSTIOSIO */
@@ -126,11 +126,14 @@
         padding: 0;
     }
     #banner img {
-        height: auto; /* TÄMÄ ON TÄRKEÄ: Säilyttää kuvasuhteen leveyden mukaan */
-        width: auto;  /* TÄMÄ ON TÄRKEÄ: Säilyttää kuvasuhteen korkeuden mukaan */
-        max-height: 120px; /* Rajoittaa korkeuden mobiilissa */
-        max-width: 100%; /* Estää leveyden pursuamisen ruudun yli */
-        margin: 0 15px 10px 15px;
+        height: 80%;
+        width: auto;
+        object-fit: contain;
+        flex-shrink: 0;
+        margin-left: 20px;
+        margin-right: 50px;
+        margin-bottom: 0;
+        }
     }
     #otsikko {
         font-size: 72px;
@@ -138,7 +141,7 @@
     #content {
         padding: 30px;
     }
-}        
+        
     </style>
 </head>
 <body>
