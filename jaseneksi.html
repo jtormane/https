@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teekkarikulttuuriseura HTTPS ry</title>
+    <style>
+        /* SIVUN YLEISET ASETUKSET */
+        body {
+            background-color: #daad0d; 
+            font-family: Verdana, Arial, sans-serif; 
+            color: #000;
+            margin: 0;
+            padding: 10px; /* Pieni keltainen reunus puhelimen reunoille */
+        }
+
+        /* PÄÄSÄILIÖ */
+        #container {
+            max-width: 800px; /* Tietokoneella sivu pysähtyy tähän leveyteen */
+            margin: 0 auto;   /* Keskiöi laatikon ruudulle tietokoneella */
+            background-color: #fff;
+            border: 2px solid #000;
+        }
+
+        /* BANNERIOSIO */
+        #banner {
+            background-color: #ffc806;
+            border-bottom: 2px solid #000;
+            text-align: center; /* Keskittää logon ja otsikon nätisti puhelimella */
+            padding: 20px 10px;
+        }
+
+        #banner img {
+            max-height: 80px; /* Pidetään logo riittävän pienenä puhelimella */
+            width: auto;
+            vertical-align: middle;
+            margin: 10px;
+        }
+
+        otsikko {
+            font-weight: bold;
+            font-size: 36px; /* Puhelimeen mahtuva otsikkokoko */
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        /* YLÄVALIKKO */
+        #navbar {
+            background-color: #000;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px 15px;
+            display: inline-block; /* Antaa linkkien rivittyä sujuvasti usealle riville */
+            font-size: 16px;
+        }
+
+        #navbar a:hover {
+            color: #ffc806;
+            text-decoration: underline;
+        }
+
+        /* TEKSTIOSIO */
+        #content {
+            padding: 20px; /* Sopiva sisämarginaali puhelimelle */
+            line-height: 1.5;
+        }
+
+        h1, h2 {
+            border-bottom: 2px solid #ffc806;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+
+        /* ALATUNNISTE */
+        #footer {
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+            border-top: 2px solid #000;
+            background-color: #eee;
+        }
+
+        /* ==================================================
+           TIETOKONERUUDUT (Yli 600px leveät näytöt) 
+           Kaikki tämän alla oleva koskee vain isompia ruutuja 
+           ================================================== */
+        @media (min-width: 600px) {
+            body {
+                padding: 30px; /* Paksummat keltaiset reunat sivuilla */
+            }
+            #banner {
+                text-align: left; /* Tietokoneella tasataan vasemmalle */
+                padding: 20px 40px;
+            }
+            #banner img {
+                max-height: 120px; /* Isompi logo tietokoneelle */
+            }
+            otsikko {
+                font-size: 64px; /* Alkuperäinen jättiotsikko takaisin! */
+            }
+            #content {
+                padding: 40px; /* Väljempää tilaa tekstille */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+ 
+    <div id="banner">
+        <img src="uuslogoilmantaustaa.png" alt="HTTPS ry logo"> 
+        <otsikko>HTTPS ry</otsikko>
+    </div>
+
+    <!-- Valikkonapit -->
+    <div id="navbar">
+        <a href="index.html">Etusivu</a>
+        <a href="#">Historia</a>
+        <a href="#">Kuvagalleria</a>
+        <a href="#">Jäseneksi?</a>
+    </div>
+
+    <!-- Tekstiosio -->
+    <div id="content">
+        <h1>Jäseneksi?</h1>
+        <p>HTTPS hakee aktiivisesti uusia jäseniä mukaan toimintaansa. Uusia jäseniä valitaan muutama vuosittain Wapun tienoilla sekä syksyllä. Jäseneksi voit hakea täyttämällä allaolevan jäsenhakemuksen <strong>paperisena</strong> seuran postilaatikkoon (PL64 yliopiston infopisteellä) tai seurahuoneelle (HK204)</p>
+        <a href = "tiedostot/HTTPSJasenhakemusUusi.pdf" target="_blank">Avaa jäsenhakemus tästä</a>
+    </div>
+
+    <!-- Alatunniste -->
+    <div id="footer">
+        &copy; 2026 HTTPS ry
+    </div>
+
+</div>
+
+</body>
+</html>     
