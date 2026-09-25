@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teekkarikulttuuriseura HTTPS ry</title>
+    <style>
+        /* SIVUN YLEISET ASETUKSET */
+        body {
+            background-color: #daad0d; 
+            font-family: Verdana, Arial, sans-serif; 
+            color: #000;
+            margin: 0;
+            padding: 10px; /* Pieni keltainen reunus puhelimen reunoille */
+        }
+
+        /* PÄÄSÄILIÖ */
+        #container {
+            max-width: 800px; /* Tietokoneella sivu pysähtyy tähän leveyteen */
+            margin: 0 auto;   /* Keskiöi laatikon ruudulle tietokoneella */
+            background-color: #fff;
+            border: 2px solid #000;
+        }
+
+        /* BANNERIOSIO */
+        #banner {
+            background-color: #ffc806;
+            border-bottom: 2px solid #000;
+            text-align: center; /* Keskittää logon ja otsikon nätisti puhelimella */
+            padding: 20px 10px;
+        }
+
+        #banner img {
+            max-height: 80px; /* Pidetään logo riittävän pienenä puhelimella */
+            width: auto;
+            vertical-align: middle;
+            margin: 10px;
+        }
+
+        otsikko {
+            font-weight: bold;
+            font-size: 36px; /* Puhelimeen mahtuva otsikkokoko */
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        /* YLÄVALIKKO */
+        #navbar {
+            background-color: #000;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px 15px;
+            display: inline-block; /* Antaa linkkien rivittyä sujuvasti usealle riville */
+            font-size: 16px;
+        }
+
+        #navbar a:hover {
+            color: #ffc806;
+            text-decoration: underline;
+        }
+
+        /* TEKSTIOSIO */
+        #content {
+            padding: 20px; /* Sopiva sisämarginaali puhelimelle */
+            line-height: 1.5;
+        }
+
+        h1, h2 {
+            border-bottom: 2px solid #ffc806;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+
+        /* ALATUNNISTE */
+        #footer {
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+            border-top: 2px solid #000;
+            background-color: #eee;
+        }
+
+        /* ==================================================
+           TIETOKONERUUDUT (Yli 600px leveät näytöt) 
+           Kaikki tämän alla oleva koskee vain isompia ruutuja 
+           ================================================== */
+        @media (min-width: 600px) {
+            body {
+                padding: 30px; /* Paksummat keltaiset reunat sivuilla */
+            }
+            #banner {
+                text-align: left; /* Tietokoneella tasataan vasemmalle */
+                padding: 20px 40px;
+            }
+            #banner img {
+                max-height: 120px; /* Isompi logo tietokoneelle */
+            }
+            otsikko {
+                font-size: 64px; /* Alkuperäinen jättiotsikko takaisin! */
+            }
+            #content {
+                padding: 40px; /* Väljempää tilaa tekstille */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+ 
+    <div id="banner">
+        <img src="uuslogoilmantaustaa.png" alt="HTTPS ry logo"> 
+        <otsikko>HTTPS ry</otsikko>
+    </div>
+
+    <!-- Valikkonapit -->
+    <div id="navbar">
+        <a href="index.html">Etusivu</a>
+        <a href="saannot.html">Säännöt</a>
+        <a href="#">Kuvagalleria</a>
+        <a href="jaseneksi.html">Jäseneksi?</a>
+    </div>
+
+    <!-- Tekstiosio -->
+    <div id="content">
+        <h1>HTTPS ry säännöt </h1>
+        <p>Hyväksytty yhdistyksen perustamiskokouksessa 10.1.2026</p>
+
+    <h2>1. Yhdistyksen nimi ja kotipaikka</h2>
+    <p>Yhdistyksen nimi on HTTPS ry ja sen kotipaikka on Oulu.</p>
+
+    <h2>2. Tarkoitus ja toiminnan laatu</h2>
+    <p>Yhdistyksen tarkoituksena on edistää ja tukea Teekkariperinteitä, sekä kehittää ja ylläpitää tervettä Teekkarikulttuuria korkeakouluopiskelijoiden keskuudessa.</p>
+    
+    <p>Tarkoituksensa toteuttamiseksi yhdistys:</p>
+    <ul>
+        <li>voi järjestää juhlia, konsertteja, näyttelyitä tai muita tilaisuuksia</li>
+        <li>voi ylläpitää yhdistyksen sähköisiä viestintäkanavia</li>
+        <li>voi julkaista yhdistyksen tiedotteita ja muuta viestintää eri viestintäkanavissa</li>
+        <li>kokoaa jäsenet yhteiseen toimintaan ja ylläpitää yhteyksiä muihin alan yhdistyksiin</li>
+        <li>voi hankkia tarvittavia aineistoja ja välineitä yhdistyksen käyttöön</li>
+        <li>toimii yhteistyössä viranomaisten, järjestöjen, yritysten ja yksityishenkilöiden kanssa</li>
+    </ul>
+
+    <p>Toimintansa tukemiseksi yhdistys voi, hankittuaan tarvittaessa asianomaisen luvan:</p>
+    <ul>
+        <li>järjestää rahankeräyksiä ja arpajaisia</li>
+        <li>järjestää maksullisia tilaisuuksia</li>
+        <li>ottaa vastaan avustuksia, lahjoituksia ja testamentteja</li>
+        <li>omistaa toimintansa kannalta tarpeellista irtainta ja kiinteää omaisuutta</li>
+        <li>tehdä talkootyötä</li>
+        <li>solmia sponsorisopimuksia</li>
+    </ul>
+
+    <h2>3. Jäsenet</h2>
+    <p>Yhdistykseen varsinaiseksi jäseneksi voidaan hyväksyä henkilö, joka hyväksyy yhdistyksen tarkoituksen. Kannattavaksi jäseneksi voidaan hyväksyä yksityinen henkilö tai oikeuskelpoinen yhteisö, joka haluaa tukea yhdistyksen tarkoitusta ja toimintaa. Varsinaiset jäsenet ja kannattavat jäsenet hyväksyy hakemuksesta yhdistyksen hallitus.</p>
+    <p>Kunniapuheenjohtajaksi tai kunniajäseneksi voidaan hallituksen esityksestä yhdistyksen kokouksessa kutsua henkilö, joka on huomattavasti edistänyt ja tukenut yhdistyksen toimintaa.</p>
+
+    <h2>4. Liittymis- ja jäsenmaksu</h2>
+    <p>Varsinaisilta jäseniltä ja kannattavilta jäseniltä perittävän liittymismaksun ja vuotuisen jäsenmaksun suuruudesta erikseen kummallekin jäsenryhmälle päättää syyskokous.</p>
+    <p>Kunniapuheenjohtaja ja kunniajäsenet eivät suorita jäsenmaksuja.</p>
+
+    <h2>5. Hallitus</h2>
+    <p>Yhdistyksen asioita hoitaa hallitus, johon kuuluu syyskokouksessa valitut puheenjohtaja ja 2 - 5 muuta varsinaista jäsentä.</p>
+    <p>Hallituksen toimikausi on kalenterivuosi.</p>
+    <p>Hallitus valitsee keskuudestaan varapuheenjohtajan sekä ottaa keskuudestaan tai ulkopuoleltaan sihteerin, rahastonhoitajan ja muut tarvittavat toimihenkilöt. Hallitus kokoontuu puheenjohtajan tai hänen estyneenä ollessaan varapuheenjohtajan kutsusta, kun he katsovat siihen olevan aihetta tai kun vähintään puolet hallituksen jäsenistä sitä vaatii. Hallitus on päätösvaltainen, kun vähintään puolet sen jäsenistä, puheenjohtaja tai varapuheenjohtaja mukaanluettuna on läsnä. Äänestykset ratkaistaan ehdottomalla ääntenenemmistöllä. Äänten mennessä tasan ratkaisee puheenjohtajan ääni, vaaleissa kuitenkin arpa.</p>
+
+    <h2>6. Yhdistyksen nimen kirjoittaminen</h2>
+    <p>Yhdistyksen nimen kirjoittaa hallituksen puheenjohtaja, varapuheenjohtaja, sihteeri, rahastonhoitaja, hallituksen oikeuttama henkilö, kukin yksin.</p>
+
+    <h2>7. Tilikausi</h2>
+    <p>Yhdistyksen tilikausi on kalenterivuosi.</p>
+
+    <h2>8. Yhdistyksen kokoukset</h2>
+    <p>Yhdistyksen kokoukseen voidaan osallistua hallituksen tai yhdistyksen kokouksen niin päättäessä myös postitse taikka tietoliikenneyhteyden tai muun teknisen apuvälineen avulla kokouksen aikana tai ennen kokousta. Yhdistyksen kokous hyväksyy äänestys- ja vaalijärjestyksen.</p>
+    <p>Yhdistys pitää vuosittain kaksi varsinaista kokousta. Yhdistyksen kevätkokous pidetään tammi-toukokuussa ja syyskokous syys-joulukuussa hallituksen määräämänä päivänä.</p>
+    <p>Yhdistyksen kokouksissa on jokaisella varsinaisella jäsenellä, kunniapuheenjohtajalla ja kunniajäsenellä yksi ääni. Kannattavalla jäsenellä on kokouksessa läsnäolo- ja puheoikeus.</p>
+    <p>Yhdistyksen kokouksen päätökseksi tulee, ellei säännöissä ole toisin määrätty, se mielipide, jota on kannattanut yli puolet annetuista äänistä.</p>
+    <p>Äänten mennessä tasan ratkaisee kokouksen puheenjohtajan ääni, vaaleissa kuitenkin arpa.</p>
+
+    <h2>9. Yhdistyksen kokousten koollekutsuminen</h2>
+    <p>Hallituksen on kutsuttava yhdistyksen kokoukset koolle vähintään 7 vuorokautta ennen kokousta.</p>
+    <p>Kokouskutsu on lähetettävä jäsenille:</p>
+    <ul>
+        <li>kirjeitse tai sähköpostitse</li>
+        <li>yhdistyksen verkkosivulla tai yhdistyksen käyttämän sosiaalisen median ryhmässä</li>
+    </ul>
+
+    <h2>10. Varsinaiset kokoukset</h2>
+    <p>Yhdistyksen kevätkokouksessa käsitellään seuraavat asiat:</p>
+    <ol>
+        <li>kokouksen avaus</li>
+        <li>valitaan kokouksen puheenjohtaja, sihteeri, kaksi pöytäkirjantarkastajaa ja tarvittaessa kaksi ääntenlaskijaa</li>
+        <li>todetaan kokouksen laillisuus ja päätösvaltaisuus</li>
+        <li>hyväksytään kokouksen työjärjestys</li>
+        <li>esitetään tilinpäätös, vuosikertomus ja toiminnantarkastajien/tilintarkastajien lausunto</li>
+        <li>päätetään tilinpäätöksen vahvistamisesta ja vastuuvapauden myöntämisestä hallitukselle ja muille vastuuvelvollisille</li>
+        <li>käsitellään muut kokouskutsussa mainitut asiat.</li>
+    </ol>
+
+    <p>Yhdistyksen syyskokouksessa käsitellään seuraavat asiat:</p>
+    <ol>
+        <li>kokouksen avaus</li>
+        <li>valitaan kokouksen puheenjohtaja, sihteeri, kaksi pöytäkirjantarkastajaa ja tarvittaessa kaksi ääntenlaskijaa</li>
+        <li>todetaan kokouksen laillisuus ja päätösvaltaisuus</li>
+        <li>hyväksytään kokouksen työjärjestys</li>
+        <li>vahvistetaan toimintasuunnitelma, tulo- ja menoarvio sekä liittymis- ja jäsenmaksujen suuruudet seuraavalle kalenterivuodelle</li>
+        <li>valitaan hallituksen puheenjohtaja ja muut jäsenet</li>
+        <li>valitaan yksi tai kaksi toiminnantarkastajaa ja varatoiminnantarkastajaa taikka yksi tai kaksi tilintarkastajaa ja varatilintarkastajaa</li>
+        <li>käsitellään muut kokouskutsussa mainitut asiat.</li>
+    </ol>
+
+    <p>Mikäli yhdistyksen jäsen haluaa saada jonkin asian yhdistyksen kevät- tai syyskokouksen käsiteltäväksi, on hänen ilmoitettava siitä kirjallisesti hallitukselle niin hyvissä ajoin, että asia voidaan sisällyttää kokouskutsuun.</p>
+
+    <h2>11. Sääntöjen muuttaminen ja yhdistyksen purkaminen</h2>
+    <p>Päätös sääntöjen muuttamisesta ja yhdistyksen purkamisesta on tehtävä yhdistyksen kokouksessa vähintään kolmen neljäsosan (3/4) enemmistöllä annetuista äänistä.</p>
+    <p>Kokouskutsussa on mainittava sääntöjen muuttamisesta tai yhdistyksen purkamisesta.</p>
+    <p>Yhdistyksen purkautuessa käytetään yhdistyksen varat yhdistyksen tarkoituksen edistämiseen purkamisesta päättävän kokouksen määräämällä tavalla. Yhdistyksen tullessa lakkautetuksi käytetään sen varat samaan tarkoitukseen.</p>
+    </div>
+
+    <!-- Alatunniste -->
+    <div id="footer">
+        &copy; 2026 HTTPS ry
+    </div>
+
+</div>
+
+</body>
+</html>     
